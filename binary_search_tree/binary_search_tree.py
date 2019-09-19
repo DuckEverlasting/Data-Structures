@@ -16,16 +16,13 @@ class BinarySearchTree:
                     return 1
                 else:
                     current = current.left
-            elif value > current.value:
+            else:
                 if not current.right:
                     current.right = BinarySearchTree(value)
                     return 1
                 else:
                     current = current.right
-            else:
-                return None
             
-
     def contains(self, target):
         current = self
         while current:
@@ -57,27 +54,30 @@ class BinarySearchTree:
         if self.right:
             self.right.for_each(cb)
 
-def find_middle(linked_list):
-    values = []
-    length = 0
-    if not linked_list.value:
-        return None
-    current = linked_list.value
-    while current:
-        values.append(current.value)
-        current = current.next
-        length += 1
-    
-    return values[length // 2]
+# DAY 2 Project -----------------------
 
-def reverse(linked_list):
-    current = linked_list
-    prev = None
-    next = current.next
-    while current:
-        next = current.next 
-        current.next = prev
-        current = next
-        \
+    # Print all the values in order from low to high
+    # Hint: Use a recursive, depth first traversal
+    def in_order_print(self):
+        pass
 
-  
+    # Print the value of every node, starting with the given node,
+    # in an iterative breadth first traversal
+    def bft_print(self, node):
+        pass
+
+    # Print the value of every node, starting with the given node,
+    # in an iterative depth first traversal
+    def dft_print(self, node):
+        pass
+
+    # STRETCH Goals -------------------------
+    # Note: Research may be required
+
+    # Print In-order recursive DFT
+    def pre_order_dft(self, node):
+        pass
+
+    # Print Post-order recursive DFT
+    def post_order_dft(self, node):
+        pass
